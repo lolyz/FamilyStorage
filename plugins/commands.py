@@ -1,6 +1,3 @@
-
-
-
 import os
 import logging
 import logging.config
@@ -18,11 +15,11 @@ OWNER_ID = os.environ.get("OWNER_ID")
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username else 'lgviral'
+    owner_username = owner.username if owner.username else 'mantapvids'
 
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
-💡 ** I am Family Storage Bot**
+💡 ** I am Mantapjozz File Store Bot**
 `You can store your Telegram Media for permanent Link!`
 """
 
@@ -62,7 +59,6 @@ async def start(c, m, cb=False):
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
             caption += "@FamilyStorageBot\n\n"
-           
 
         await msg.copy(m.from_user.id, caption=caption)
 
