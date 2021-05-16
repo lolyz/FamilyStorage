@@ -22,20 +22,7 @@ async def storefile(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "--**🗃️ File Details:**--\n\n"
-        text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __File Format:__ `{media.mime_type}`\n\n" if media.mime_type else ""
-        text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
-        if not m.document:
-            text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
-            if m.audio:
-                text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-                text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += "**--Tutorial Mantapjozz Channel:--**\n\n"
-    text += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
-    text += f"__==================__\n"
-    text += f"__🏩 Channel:__ @mantapvids\n"
-    text += f"__🏦 Hastag :__ #video #staycolayforlaif\n\n"
+        text = "@FamilyStorage\n\n"
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -77,21 +64,7 @@ async def storefile_channel(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "**🗃️ File Details:**\n\n"
-        text += f"📂 __File Name:__ `{media.file_name}`\n\n" if media.file_name else ""
-        text += f"💽 __File Format:__ `{media.mime_type}`\n\n" if media.mime_type else ""
-        text += f"📊 __File Size:__ `{humanbytes(media.file_size)}`\n\n" if media.file_size else ""
-        if not m.document:
-            text += f"🎞 __Duration:__ `{TimeFormatter(media.duration * 1000)}`\n\n" if media.duration else ""
-            if m.audio:
-                text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
-                text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += "**--Tutorial Mantapjozz Channel:--**\n\n"
-    text += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
-    text += f"__==================__\n"
-    text += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
-    text += f"__🏩 Channel:__ @mantapvids\n"
-    text += f"__🏦 Hastag :__ #video #staycolayforlaif\n\n"
+        text = "@FamilyStorage\n\n"
     text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
     # if databacase channel exist forwarding message to channel
