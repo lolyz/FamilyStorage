@@ -31,7 +31,7 @@ async def storefile(c, m):
             if m.audio:
                 text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
                 text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += "Link : `{url}`\n\n"
+    text += f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"\n\n"
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -42,7 +42,7 @@ async def storefile(c, m):
     bot = await c.get_me()
     url = f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"
     txt = urllib.parse.quote(text.replace('--', ''))
-    share_url = f"t.me/share?url={url}"
+    share_url = f"https://t.me/share/url?url={url}"
 
     # making buttons
     buttons = [[
@@ -82,7 +82,7 @@ async def storefile_channel(c, m):
             if m.audio:
                 text += f"🎵 __Title:__ `{media.title}`\n\n" if media.title else ""
                 text += f"🎙 __Performer:__ `{media.performer}`\n\n" if media.performer else ""
-    text += "Link : `{url}`\n\n"
+    text += f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"\n\n"
     text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
     # if databacase channel exist forwarding message to channel
