@@ -23,7 +23,7 @@ async def start(c, m, cb=False):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
 💡 ** I am Family Storage Bot**
-`You can store your Telegram Media for permanent Link!`)}
+`You can store your Telegram Media for permanent Link!`
 """
 
     # Buttons
