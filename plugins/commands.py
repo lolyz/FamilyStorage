@@ -56,7 +56,7 @@ async def start(c, m, cb=False):
             caption += "**TUTORIAL DOWNLOAD**\n\n"
             caption += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
             caption += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
-            caption += f"@FamilyStorageBot\n\n”
+            caption += f"@FamilyStorageBot\n\n"
             caption += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
         else: #if file not from channel
