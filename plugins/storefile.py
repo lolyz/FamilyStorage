@@ -1,3 +1,6 @@
+
+
+
 import os
 import urllib
 from pyrogram import Client, filters
@@ -22,7 +25,7 @@ async def storefile(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "@FamilyStorage\n\n"
+        text = "@FamilyStorageBot\n\n"
 
     # if databacase channel exist forwarding message to channel
     if DB_CHANNEL_ID:
@@ -64,7 +67,7 @@ async def storefile_channel(c, m):
     # text
     text = ""
     if not m.photo:
-        text = "@FamilyStorage\n\n"
+        text = "@FamilyStorageBot\n\n"
     text += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
     # if databacase channel exist forwarding message to channel
