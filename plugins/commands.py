@@ -19,7 +19,7 @@ async def start(c, m, cb=False):
 
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
-💡 ** I am Mantapjozz File Store Bot**
+💡 ** I am Family File Storage Bot**
 `You can store your Telegram Media for permanent Link!`
 """
 
@@ -53,12 +53,18 @@ async def start(c, m, cb=False):
 
         if chat_id.startswith('-100'): #if file from channel
             channel = await c.get_chat(int(chat_id))
-            caption += "@FamilyStorageBot\n\n"
+            caption += "**TUTORIAL DOWNLOAD**\n\n"
+            caption += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
+            caption += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
+            caption += f"@FamilyStorageBot\n\n”
             caption += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
-            caption += "@FamilyStorageBot\n\n"
+            caption += "**TUTORIAL DOWNLOAD**\n\n"
+            caption += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
+            caption += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
+            caption += f"@FamilyStorageBot\n\n"
 
         await msg.copy(m.from_user.id, caption=caption)
 
