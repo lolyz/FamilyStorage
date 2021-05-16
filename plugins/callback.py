@@ -57,7 +57,7 @@ async def about_cb(c, m):
 🤖 𝐌𝐲 𝐍𝐚𝐦𝐞: {bot.mention(style='md')}
     
 💻 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫: {owner.mention(style='md')}
-📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [Mantapjozz](https://t.me/FStorage)
+📢 𝐂𝐡𝐚𝐧𝐧𝐞𝐥: [Family Storage](https://t.me/FStorage)
 """
 
     # creating buttons
