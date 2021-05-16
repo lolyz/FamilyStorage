@@ -1,5 +1,5 @@
 {
-  "name": "Mantap File Storage",
+  "name": "Family Storage",
   "description": "Telegram bot to store your telegram files",
   "keywords": [
     "telegram",
@@ -21,7 +21,7 @@
       "value": ""
     },
     "API_ID": {
-      "description": "Get this value from https://t.me/mantapvids",
+      "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
     "DB_CHANNEL_ID": {
@@ -33,7 +33,7 @@
       "value": "1290356065"
     },
     "API_HASH": {
-      "description": "Get this value from https://t.me/mantapvids",
+      "description": "Get this value from https://t.me/FStorage",
       "value": "4e66688f8ffef415af4f0c550e3b7f3d"
     }
   },
