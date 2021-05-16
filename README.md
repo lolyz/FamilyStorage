@@ -1,4 +1,4 @@
-This is a Mantapjozz Storage bot helps you to store your files and get the share able permanent link 
+This is a Family Storage bot helps you to store your files and get the share able permanent link 
 
 <a href="https://telegram.dog/mantapstoragebot"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes/yellow?icon=github)](https://github.com/softmilkpc/mantapstorage)
