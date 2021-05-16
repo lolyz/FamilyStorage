@@ -1,6 +1,3 @@
-
-
-
 import os
 import urllib
 from pyrogram import Client, filters
