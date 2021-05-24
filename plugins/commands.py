@@ -15,7 +15,7 @@ OWNER_ID = os.environ.get("OWNER_ID")
 @Client.on_message(filters.command('start') & filters.incoming & filters.private)
 async def start(c, m, cb=False):
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username else 'mantapvids'
+    owner_username = owner.username if owner.username else 'lgviral'
 
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')}
@@ -26,7 +26,7 @@ async def start(c, m, cb=False):
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Channel', url=f"https://t.me/FStorage"),
+            InlineKeyboardButton('My Channel', url=f"https://t.me/LgViral"),
             InlineKeyboardButton('Help 💡', callback_data="help")
         ],
         [
@@ -53,9 +53,17 @@ async def start(c, m, cb=False):
 
         if chat_id.startswith('-100'): #if file from channel
             channel = await c.get_chat(int(chat_id))
+            caption += "**--Tutorial Mantapjozz Channel:--**\n\n"
+            caption += "**--TUTORIAL DOWNLOAD--**\n\n"
+            caption += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
+            caption += f"__📢 Channel Name:__ `{m.chat.title}`\n\n"
+            caption += f"__🏩 Channel:__ @LgViral\n"
+            caption += f"__👁 Members Count:__ {m.chat.members_count}\n\n" if m.chat.members_count else ""
 
         else: #if file not from channel
             user = await c.get_users(int(chat_id))
+            caption += "**--TUTORIAL DOWNLOAD--**\n\n"
+            caption += f"__Untuk menonton video silahkan Klik **download** lalu klik **start** untuk menonton video atau file__\n\n"
 
         await msg.copy(m.from_user.id, caption=caption)
 
@@ -80,4 +88,4 @@ async def me(c, m):
     text += f"__💨 Is Scam:__ {me.is_scam}\n\n" if me.is_scam else ""
     text += f"__📃 Language Code:__ {me.language_code}\n\n" if me.language_code else ""
 
-    await m.reply_text(text, quote=True)
+     await m.reply_text(text, quote=True)
